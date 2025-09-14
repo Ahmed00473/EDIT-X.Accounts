@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>EDIT-X - الصفحة الرسمية</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- استدعاء الخط -->
+  <style>
+@import url('https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&family=Zain:ital,wght@0,200;0,300;0,400;0,700;0,800;0,900;1,300;1,400&display=swap');
+</style>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Zain';
+      background: linear-gradient(135deg, #1c1c34, #364f6b, #141E30);
+      background-size: 400% 400%;
+      animation: gradientBG 18s ease infinite;
+      color: #f0f0f0;
+      text-align: center;
+      scroll-behavior: smooth;
+    }
+
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* نجوم */
+    .stars {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      overflow: hidden;
+    }
+
+    .star {
+      position: absolute;
+      width: 2px;
+      height: 2px;
+      background: white;
+      border-radius: 50%;
+      opacity: 0.8;
+      animation: twinkle 3s infinite ease-in-out alternate;
+    }
+
+    @keyframes twinkle {
+      from { opacity: 0.2; transform: scale(1); }
+      to { opacity: 1; transform: scale(1.6); }
+    }
+
+    /* شريط التنقل */
+    .navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(20, 20, 40, 0.8);
+      backdrop-filter: blur(10px);
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      padding: 15px 0;
+      z-index: 1000;
+    }
+
+    .navbar a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+      font-size: 18px;
+      transition: 0.3s;
+    }
+
+    .navbar a:hover {
+      color: #00f7ff;
+      text-shadow: 0 0 10px #00f7ff;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 120px auto 40px;
+      padding: 20px;
+    }
+
+    .profile-pic {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      margin: 0 auto 20px;
+      background: url('https://i.postimg.cc/L6Mtk45S/snapedit-1757580235128.png') no-repeat center/cover;
+      box-shadow: 0 0 25px #739EC9, 0 0 50px #00f7ff, 0 0 70px white;
+      animation: glow 2s ease-in-out infinite alternate;
+    }
+
+    @keyframes glow {
+      from { box-shadow: 0 0 15px #222; }
+      to { box-shadow: 0 0 35px #00f7ff, 0 0 60px #739EC9; }
+    }
+
+    h1 {
+      font-size: 48px;
+      margin-bottom: 10px;
+      text-shadow: 0 0 12px #fff, 0 0 22px #00f7ff;
+    }
+
+    h2 {
+      font-size: 26px;
+      margin: 60px 0 15px;
+      color: #00f7ff;
+      text-shadow: 0 0 8px #00f7ff;
+      scroll-margin-top: 90px; /* عشان الهيدر ما يغطيش القسم */
+      padding-top: 5px;
+    }
+
+    p {
+      font-size: 18px;
+      color: #ddd;
+      line-height: 1.7;
+      margin: 0 0 20px;
+    }
+
+    .links a {
+      display: block;
+      text-decoration: none;
+      color: white;
+      font-size: 18px;
+      font-weight: bold;
+      margin: 12px 0;
+      padding: 14px;
+      border-radius: 8px;
+      background: rgba(255,255,255,0.08);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 0 15px rgba(0,247,255,0.6);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .links a:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 25px rgba(0,247,255,1), 0 0 40px rgba(0,247,255,0.8);
+    }
+
+    .contact {
+      margin-top: 40px;
+      padding: 20px;
+      background: rgba(255,255,255,0.05);
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(138,208,255,0.3);
+    }
+  </style>
+</head>
+<body>
+  <!-- نجوم -->
+  <div class="stars">
+    <div class="star" style="top:20%; left:10%; animation-delay:0s;"></div>
+    <div class="star" style="top:50%; left:30%; animation-delay:1s;"></div>
+    <div class="star" style="top:80%; left:70%; animation-delay:2s;"></div>
+    <div class="star" style="top:40%; left:90%; animation-delay:1.5s;"></div>
+    <div class="star" style="top:10%; left:60%; animation-delay:2.5s;"></div>
+    <div class="star" style="top:70%; left:20%; animation-delay:0.5s;"></div>
+    <div class="star" style="top:30%; left:80%; animation-delay:3s;"></div>
+  </div>
+
+  <!-- شريط التنقل -->
+  <div class="navbar">
+    <a href="#about">عنّي</a>
+    <a href="#services">الأقسام</a>
+    <a href="#channels">قنواتي</a>
+    <a href="#contact">تواصل</a>
+  </div>
+
+  <div class="container">
+    <div class="profile-pic"></div>
+    <h1>EDIT-X</h1>
+    <p>🎬 صانع محتوى متخصص في <strong>المونتاج</strong> و <strong>تصميم الجرافيك</strong><br>
+    أقدّم أعمال إبداعية، أفكار جديدة، وفعاليات ممتعة لعشاق التصميم والإبداع.</p>
+
+    <!-- عني -->
+    <h2 id="about">عنّي</h2>
+    <p>
+      أهلاً بيكم في موقعي 👋  
+      هنا هتلاقوا كل المعلومات عني وروابطي المهمة.  
+      هدفي إني أشارك خبرتي في التصميم والمونتاج وأقدّم محتوى يلهم المبدعين.
+    </p>
+
+    <!-- الأقسام -->
+    <h2 id="services">الأقسام</h2>
+    <p>✔️ مونتاج فيديو احترافي<br>
+       ✔️ تصميم جرافيك مميز<br>
+       ✔️ فعاليات ومسابقات<br>
+       ✔️ شروحات وأفكار جديدة</p>
+
+    <!-- القنوات -->
+    <h2 id="channels">قنواتي</h2>
+    <div class="links">
+      <a href="https://youtube.com/@editx1k" target="_blank">🎥 YouTube</a>
+      <a href="https://t.me/kreeperx" target="_blank">📢 Telegram</a>
+      <a href="https://www.tiktok.com/@editxj1?_t=ZS-8zhpARMPgk4&_r=1" target="_blank">📸 TikTok</a>
+    </div>
+
+    <!-- التواصل -->
+    <div id="contact" class="contact">
+      <h2>تواصل معي</h2>
+      <p>📧 يمكنك مراسلتي عبر البريد: <strong>editx.contact@gmail.com</strong></p>
+      <p>💬 أو من خلال قنواتي الاجتماعية بالأعلى</p>
+    </div>
+  </div>
+</body>
+</html>
